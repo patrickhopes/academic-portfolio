@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>NYC Airbnb Price Prediction | Project Notes</title><style>
+  :root{--ink:#21362e;--green:#174c3f;--muted:#5b6c61;--line:#d6e2d5;--paper:#f5f7f1}*{box-sizing:border-box}body{margin:0;font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper)}main{max-width:1000px;margin:40px auto 70px;background:white;border:1px solid var(--line);border-radius:16px;padding:48px 56px;box-shadow:0 10px 35px #173f2d08}h1,h2,h3{line-height:1.25;color:var(--green)}h1{font-family:Georgia,serif;font-size:39px;font-weight:400;letter-spacing:-.025em;margin:15px 0 28px}h2{font-size:25px;margin:42px 0 18px;scroll-margin-top:25px}h3{font-size:18px;margin:28px 0 12px}p{margin:0 0 18px}a{color:var(--green);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #ad7224;outline-offset:4px}ul,ol{padding-left:25px;margin:12px 0 22px}li{margin:6px 0}table{border-collapse:collapse;width:100%;margin:22px 0 30px;font-size:13px}th,td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:11px 12px}th{background:#eaf1e5;color:#274735;font-weight:650}td:first-child{font-weight:500}pre{overflow:auto;max-width:100%;background:#f0f4ed;border:1px solid #dce5d7;border-radius:7px;padding:17px;font:12px/1.6 Consolas,"Liberation Mono",monospace;white-space:pre;tab-size:4}code{font-family:Consolas,"Liberation Mono",monospace;font-size:.86em;overflow-wrap:anywhere;background:#f0f4ed;padding:2px 4px;border-radius:3px}pre code{background:transparent;padding:0;font-size:inherit}blockquote{margin:18px 0;padding-left:18px;border-left:3px solid #8fa487;color:var(--muted)}.topline{font-size:11px;letter-spacing:.13em;font-weight:700;color:var(--muted);text-transform:uppercase}.intro-links{display:flex;flex-wrap:wrap;gap:15px;font-size:13px;margin:14px 0 28px}.contents{background:#f2f6ef;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:30px}.contents h2{margin:0 0 10px;font-size:16px}.contents ol{margin:0;padding-left:21px;font-size:13px}.table-scroll{overflow:auto;max-width:100%;margin-bottom:10px}.note{font-size:13px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin:20px 0 30px}.cell{scroll-margin-top:20px;border-top:1px solid var(--line);padding:22px 0}.cell-label{font-size:10px;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-bottom:10px;text-transform:uppercase}.cell img{max-width:100%;height:auto;display:block;background:white;margin:18px 0}.cell details summary{cursor:pointer;font-size:12px;font-weight:650;color:var(--green);padding:7px 0}.output pre{background:#fafbf8;font-size:11px}.cell h1{font-size:29px;margin:15px 0 20px}.cell h2{margin-top:20px}.cell p{font-size:14px}.footer-note{font-size:11px;color:var(--muted);margin:35px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+  @media(max-width:760px){main{margin:18px 12px 35px;padding:25px 22px;border-radius:10px}h1{font-size:30px}h2{font-size:22px}body{font-size:15px}th,td{padding:9px;font-size:12px}.cell h1{font-size:24px}}
+  @media print{body{background:white}main{margin:0;padding:0;border:0;box-shadow:none}a{color:black}.contents,.intro-links{display:none}pre{white-space:pre-wrap}h2,h3{break-after:avoid}table{font-size:10px}}
+</style></head><body><main><div class="topline">Project notes and attribution</div><div class="intro-links"><a href="../../index.html#projects">Back to the portfolio</a><a href="README.md">Markdown version</a></div><h1>NYC Airbnb Price Prediction</h1>
+<p>This group project studies which public listing characteristics help estimate nightly Airbnb prices in New York City. It combines exploratory analysis, feature engineering, preprocessing, model comparison, and interpretation for a business audience.</p>
+<h2>Files</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="report.pdf">report.pdf</a></td>
+<td>Ten-slide analysis report with modeling approach, results, recommendations, and limitations</td>
+</tr>
+<tr>
+<td><a href="analysis.ipynb">analysis.ipynb</a></td>
+<td>Original Python notebook, including saved outputs</td>
+</tr>
+<tr>
+<td><a href="notebook.html">notebook.html</a></td>
+<td>Readable static preview generated from the supplied notebook; no cells are executed</td>
+</tr>
+</tbody></table></div>
+<h2>Methods</h2>
+<p>Python, pandas, NumPy, Matplotlib, and scikit-learn support data preparation, geographic and amenity features, missing-value imputation, categorical encoding, log-price modeling, and test-set evaluation. The analysis compares a mean-price baseline, Linear Regression, Random Forest, and a tuned Random Forest.</p>
+<h2>Reported results</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Test RMSE ($)</th>
+<th>Test MAE ($)</th>
+<th>Test R²</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mean-price baseline</td>
+<td>415.73</td>
+<td>194.03</td>
+<td>-0.00</td>
+</tr>
+<tr>
+<td>Linear Regression</td>
+<td>1,376.34</td>
+<td>122.18</td>
+<td>-9.97</td>
+</tr>
+<tr>
+<td>Random Forest</td>
+<td>282.32</td>
+<td>78.76</td>
+<td>0.54</td>
+</tr>
+<tr>
+<td>Random Forest tuned</td>
+<td>288.50</td>
+<td>77.05</td>
+<td>0.52</td>
+</tr>
+</tbody></table></div>
+<p>The untuned Random Forest had the best RMSE and R²; tuning gave a slightly lower MAE. These values are preserved from the submitted report and notebook, rather than reproduced in preparation of this portfolio. Extreme prices weaken performance, and the project does not measure changes in bookings or revenue.</p>
+<h2>Reproduction notes</h2>
+<p>The notebook expects <code>/content/listings.csv</code> and <code>/content/Inside Airbnb Data Dictionary - listings.csv detail v4.3.csv</code>. These CSV files were not supplied in the portfolio attachments. Obtain the original NYC snapshot and dictionary from the project team or <a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a>; a newer snapshot may produce different results. Saved sample records indicate a June 2026 scrape.</p>
+<p>To run in Google Colab, upload those files into <code>/content</code> before the loading cells. To run locally, install the listed Python libraries and replace the <code>/content</code> paths with your local paths. Some later visualization code uses Colab&#39;s upload helper and will need adjustment in a local notebook.</p>
+<p>The optional visualization cell also references <code>/content/airbnb_model_story_visualizations_self_contained.py</code>, which was not attached. Skip that optional cell unless you obtain the script. The preceding core modeling cells remain available for inspection.</p>
+<p>The saved cleaning output reports 21,512 rows, while the later saved predictor split reports 21,515 rows. This difference indicates that the saved outputs should be refreshed with a consistent run before asserting exact reproducibility. No original notebook code or outputs were changed for this portfolio.</p>
+<h2>Collaboration</h2>
+<p>IS 4487, Group 5. Original contributors: Chloe Crowley, Patrick Hopes, Dylan Bindrup, Dhiab Aljabri, and Sager Sharma. Individual responsibilities are not specified in the supplied files. Add your own accurate role to the portfolio settings before claiming particular components.</p>
+</main></body></html>

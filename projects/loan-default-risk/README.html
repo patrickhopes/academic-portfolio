@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Loan Default Risk Assessment | Project Notes</title><style>
+  :root{--ink:#21362e;--green:#174c3f;--muted:#5b6c61;--line:#d6e2d5;--paper:#f5f7f1}*{box-sizing:border-box}body{margin:0;font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper)}main{max-width:1000px;margin:40px auto 70px;background:white;border:1px solid var(--line);border-radius:16px;padding:48px 56px;box-shadow:0 10px 35px #173f2d08}h1,h2,h3{line-height:1.25;color:var(--green)}h1{font-family:Georgia,serif;font-size:39px;font-weight:400;letter-spacing:-.025em;margin:15px 0 28px}h2{font-size:25px;margin:42px 0 18px;scroll-margin-top:25px}h3{font-size:18px;margin:28px 0 12px}p{margin:0 0 18px}a{color:var(--green);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #ad7224;outline-offset:4px}ul,ol{padding-left:25px;margin:12px 0 22px}li{margin:6px 0}table{border-collapse:collapse;width:100%;margin:22px 0 30px;font-size:13px}th,td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:11px 12px}th{background:#eaf1e5;color:#274735;font-weight:650}td:first-child{font-weight:500}pre{overflow:auto;max-width:100%;background:#f0f4ed;border:1px solid #dce5d7;border-radius:7px;padding:17px;font:12px/1.6 Consolas,"Liberation Mono",monospace;white-space:pre;tab-size:4}code{font-family:Consolas,"Liberation Mono",monospace;font-size:.86em;overflow-wrap:anywhere;background:#f0f4ed;padding:2px 4px;border-radius:3px}pre code{background:transparent;padding:0;font-size:inherit}blockquote{margin:18px 0;padding-left:18px;border-left:3px solid #8fa487;color:var(--muted)}.topline{font-size:11px;letter-spacing:.13em;font-weight:700;color:var(--muted);text-transform:uppercase}.intro-links{display:flex;flex-wrap:wrap;gap:15px;font-size:13px;margin:14px 0 28px}.contents{background:#f2f6ef;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:30px}.contents h2{margin:0 0 10px;font-size:16px}.contents ol{margin:0;padding-left:21px;font-size:13px}.table-scroll{overflow:auto;max-width:100%;margin-bottom:10px}.note{font-size:13px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin:20px 0 30px}.cell{scroll-margin-top:20px;border-top:1px solid var(--line);padding:22px 0}.cell-label{font-size:10px;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-bottom:10px;text-transform:uppercase}.cell img{max-width:100%;height:auto;display:block;background:white;margin:18px 0}.cell details summary{cursor:pointer;font-size:12px;font-weight:650;color:var(--green);padding:7px 0}.output pre{background:#fafbf8;font-size:11px}.cell h1{font-size:29px;margin:15px 0 20px}.cell h2{margin-top:20px}.cell p{font-size:14px}.footer-note{font-size:11px;color:var(--muted);margin:35px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+  @media(max-width:760px){main{margin:18px 12px 35px;padding:25px 22px;border-radius:10px}h1{font-size:30px}h2{font-size:22px}body{font-size:15px}th,td{padding:9px;font-size:12px}.cell h1{font-size:24px}}
+  @media print{body{background:white}main{margin:0;padding:0;border:0;box-shadow:none}a{color:black}.contents,.intro-links{display:none}pre{white-space:pre-wrap}h2,h3{break-after:avoid}table{font-size:10px}}
+</style></head><body><main><div class="topline">Project notes and attribution</div><div class="intro-links"><a href="../../index.html#projects">Back to the portfolio</a><a href="README.md">Markdown version</a></div><h1>Loan Default Risk Assessment</h1>
+<p>This capstone workbook turns a fitted logistic regression model into an Excel demonstration of credit risk assessment. A reader can enter an applicant profile, inspect the estimated default probability, and trace the result to the coefficients and calculations.</p>
+<h2>File</h2>
+<p><a href="loan-default-capstone.xlsx">loan-default-capstone.xlsx</a> is the original supplied workbook, with its content preserved.</p>
+<h2>Workbook structure</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Worksheet</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ReadMe</td>
+<td>Overview, usage, model method, and scope</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>Applicant, loan, and financial inputs</td>
+</tr>
+<tr>
+<td>Results Dashboard</td>
+<td>Estimated probability, risk classification, decision prompt, and indicators</td>
+</tr>
+<tr>
+<td>Coefficients</td>
+<td>Imported logistic regression coefficients and variable notes</td>
+</tr>
+<tr>
+<td>Calculations</td>
+<td>Encoding, coefficient application, logistic conversion, and risk tier</td>
+</tr>
+</tbody></table></div>
+<p>The ReadMe documents SQL data checks, model fitting in R, and the transfer of model coefficients into Excel. The public loan dataset, SQL checks, and R training code were not attached, so this folder contains the scoring implementation rather than the entire training pipeline.</p>
+<h2>Open and explore</h2>
+<p>Download the workbook and open it in Excel. Start with the ReadMe, change the values on Input, and inspect Results Dashboard. The Coefficients and Calculations sheets show how the score is built.</p>
+<h2>Scope and known items to review</h2>
+<p>This is an academic demonstration, rather than a validated lending tool. The supplied risk tiers, decision prompts, and confidence labels do not establish model accuracy, calibrated uncertainty, fairness, or appropriate policy for actual borrowers.</p>
+<p>The original workbook includes an education-category match using <code>HighSchool</code> while the input option is <code>High School</code>, and DTI labels that mix percentage wording with a ratio-style input. Review those items before extending or relying on the demonstration. The workbook has not been repaired or recalculated as part of creating the portfolio.</p>
+</main></body></html>

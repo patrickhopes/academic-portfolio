@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>GitHub Portfolio Setup Guide</title><style>
+  :root{--ink:#21362e;--green:#174c3f;--muted:#5b6c61;--line:#d6e2d5;--paper:#f5f7f1}*{box-sizing:border-box}body{margin:0;font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper)}main{max-width:1000px;margin:40px auto 70px;background:white;border:1px solid var(--line);border-radius:16px;padding:48px 56px;box-shadow:0 10px 35px #173f2d08}h1,h2,h3{line-height:1.25;color:var(--green)}h1{font-family:Georgia,serif;font-size:39px;font-weight:400;letter-spacing:-.025em;margin:15px 0 28px}h2{font-size:25px;margin:42px 0 18px;scroll-margin-top:25px}h3{font-size:18px;margin:28px 0 12px}p{margin:0 0 18px}a{color:var(--green);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid #ad7224;outline-offset:4px}ul,ol{padding-left:25px;margin:12px 0 22px}li{margin:6px 0}table{border-collapse:collapse;width:100%;margin:22px 0 30px;font-size:13px}th,td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:11px 12px}th{background:#eaf1e5;color:#274735;font-weight:650}td:first-child{font-weight:500}pre{overflow:auto;max-width:100%;background:#f0f4ed;border:1px solid #dce5d7;border-radius:7px;padding:17px;font:12px/1.6 Consolas,"Liberation Mono",monospace;white-space:pre;tab-size:4}code{font-family:Consolas,"Liberation Mono",monospace;font-size:.86em;overflow-wrap:anywhere;background:#f0f4ed;padding:2px 4px;border-radius:3px}pre code{background:transparent;padding:0;font-size:inherit}blockquote{margin:18px 0;padding-left:18px;border-left:3px solid #8fa487;color:var(--muted)}.topline{font-size:11px;letter-spacing:.13em;font-weight:700;color:var(--muted);text-transform:uppercase}.intro-links{display:flex;flex-wrap:wrap;gap:15px;font-size:13px;margin:14px 0 28px}.contents{background:#f2f6ef;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin-bottom:30px}.contents h2{margin:0 0 10px;font-size:16px}.contents ol{margin:0;padding-left:21px;font-size:13px}.table-scroll{overflow:auto;max-width:100%;margin-bottom:10px}.note{font-size:13px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;margin:20px 0 30px}.cell{scroll-margin-top:20px;border-top:1px solid var(--line);padding:22px 0}.cell-label{font-size:10px;letter-spacing:.07em;color:var(--muted);font-weight:600;margin-bottom:10px;text-transform:uppercase}.cell img{max-width:100%;height:auto;display:block;background:white;margin:18px 0}.cell details summary{cursor:pointer;font-size:12px;font-weight:650;color:var(--green);padding:7px 0}.output pre{background:#fafbf8;font-size:11px}.cell h1{font-size:29px;margin:15px 0 20px}.cell h2{margin-top:20px}.cell p{font-size:14px}.footer-note{font-size:11px;color:var(--muted);margin:35px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+  @media(max-width:760px){main{margin:18px 12px 35px;padding:25px 22px;border-radius:10px}h1{font-size:30px}h2{font-size:22px}body{font-size:15px}th,td{padding:9px;font-size:12px}.cell h1{font-size:24px}}
+  @media print{body{background:white}main{margin:0;padding:0;border:0;box-shadow:none}a{color:black}.contents,.intro-links{display:none}pre{white-space:pre-wrap}h2,h3{break-after:avoid}table{font-size:10px}}
+</style></head><body><main><div class="topline">Portfolio publishing guide</div><div class="intro-links"><a href="index.html">Open the portfolio</a><a href="GITHUB-SETUP-GUIDE.md">Markdown version</a></div><h1>Publish Your Professional Portfolio on GitHub Pages</h1><nav class="contents" aria-label="Guide contents"><h2>In this guide</h2><ol><li><a href="#1-download-and-extract-the-package">1. Download and extract the package</a></li><li><a href="#2-confirm-your-name-and-add-your-public-links">2. Confirm your name and add your public links</a></li><li><a href="#3-create-your-github-repository">3. Create your GitHub repository</a></li><li><a href="#4-upload-the-html-and-project-documents-together">4. Upload the HTML and project documents together</a></li><li><a href="#5-enable-github-pages">5. Enable GitHub Pages</a></li><li><a href="#6-open-and-check-your-website">6. Open and check your website</a></li><li><a href="#7-add-the-website-to-your-professional-profiles">7. Add the website to your professional profiles</a></li><li><a href="#8-update-your-portfolio-later">8. Update your portfolio later</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#what-is-included-and-what-to-review">What is included and what to review</a></li><li><a href="#official-references">Official references</a></li></ol></nav>
+<p>This guide takes you from the downloaded portfolio package to a public website. You can complete the setup in your web browser. Your portfolio is a static HTML page; no programming installation, paid hosting, or custom domain is required for this setup.</p>
+<p><strong>Start with the complete ZIP package.</strong> The separate <code>index.html</code> is the portfolio page, but its document links depend on the <code>projects</code> folder included in the ZIP. GitHub stores your files in a repository; GitHub Pages turns the HTML into a website.</p>
+<h2 id="1-download-and-extract-the-package">1. Download and extract the package</h2>
+<ol>
+<li>Download <code>phil-hopkins-portfolio.zip</code> to your computer.</li>
+<li>On Windows, right-click the ZIP and select <strong>Extract All</strong>. On macOS, double-click it.</li>
+<li>Open the extracted <code>phil-hopkins-portfolio</code> folder.</li>
+<li>Double-click <code>index.html</code> to review the portfolio in your browser. Keep the <code>projects</code> folder beside it so the document links work.</li>
+<li>Open <code>GITHUB-SETUP-GUIDE.html</code> to read this guide locally. A Markdown version is also included for GitHub.</li>
+</ol>
+<p>The page contains seven projects with related files grouped together. The original ten files have been copied without changing their contents and given simple filenames for reliable web links.</p>
+<h2 id="2-confirm-your-name-and-add-your-public-links">2. Confirm your name and add your public links</h2>
+<p>The page currently uses <strong>Phil Hopkins</strong>. Several supplied reports credit <strong>Patrick Hopes</strong> or <strong>Patric Hopes</strong>. Confirm the portfolio name and your relationship to the credited authors before sharing the site. The original author credits remain in the documents and project notes.</p>
+<ol>
+<li>Right-click <code>index.html</code> and choose <strong>Open with → Notepad</strong>, or use another plain-text editor. Do not use Word to edit the HTML.</li>
+<li>Near the top, find the comment <strong>EDIT BEFORE PUBLISHING</strong>.</li>
+<li>Edit the settings below. Keep the quotation marks and commas. These example values must be replaced with your own details:</li>
+</ol>
+<pre><code class="language-javascript">const PORTFOLIO = {
+  name: &quot;Phil Hopkins&quot;,
+  initials: &quot;PH&quot;,
+  githubUsername: &quot;YOUR-GITHUB-USERNAME&quot;,
+  repositoryName: &quot;YOUR-GITHUB-USERNAME.github.io&quot;,
+  linkedinUrl: &quot;https://www.linkedin.com/in/YOUR-PROFILE/&quot;,
+  email: &quot;YOUR-PUBLIC-CONTACT-EMAIL&quot;,
+  individualContributions: {
+    airbnb: &quot;&quot;,
+    database: &quot;&quot;,
+    housing: &quot;&quot;,
+    seo: &quot;&quot;
+  }
+};
+</code></pre>
+<p>Use your GitHub username, which is the account name in <code>https://github.com/yourusername</code>. It may be different from your display name. Enter your actual LinkedIn profile URL. You can leave <code>linkedinUrl</code> and <code>email</code> as <code>&quot;&quot;</code> if you do not want those buttons. Blank fields are hidden. A GitHub profile link is also inferred when the page is hosted at a <code>github.io</code> address.</p>
+<p>For group projects, add one accurate sentence describing your personal contribution in the relevant <code>individualContributions</code> field. For example, describe the components you actually worked on rather than claiming the whole project. Leaving these fields blank keeps the page labeled as group work.</p>
+<p>Save the file, refresh your browser, and check the changes. If you change your name, also update it in <code>README.md</code> with a plain-text editor. Save as <strong>All files</strong> if Notepad offers that choice, so the filename stays <code>index.html</code> rather than <code>index.html.txt</code>.</p>
+<h2 id="3-create-your-github-repository">3. Create your GitHub repository</h2>
+<ol>
+<li>Sign in at <a href="https://github.com/">github.com</a>, or create an account if you do not have one. Verify your account email.</li>
+<li>Click the <strong>+</strong> menu near the top right, then choose <strong>New repository</strong>.</li>
+<li>Select your own account as the owner.</li>
+<li>Name the repository <strong><code>yourusername.github.io</code></strong>, replacing <code>yourusername</code> with your actual GitHub username in lowercase. For example, an account named <code>sampleuser</code> uses <code>sampleuser.github.io</code>.</li>
+<li>Add a description such as <strong>Academic portfolio in data analytics, information systems, and business analysis</strong>.</li>
+<li>Select <strong>Public</strong> for this GitHub Free setup.</li>
+<li>Turn on <strong>Add README</strong> so the repository starts with a default branch. You will replace the initial README with the one in the package.</li>
+<li>Click <strong>Create repository</strong>. Confirm that the branch dropdown shows <strong>main</strong>.</li>
+</ol>
+<p>If you already have a repository named <code>yourusername.github.io</code>, use it only if you intend to update its existing website. You can also create a project repository named <code>portfolio</code>; that produces a site at <code>https://yourusername.github.io/portfolio/</code>. The portfolio uses relative document paths, so both layouts work. If you choose <code>portfolio</code>, set <code>repositoryName</code> to <code>&quot;portfolio&quot;</code> in the settings block.</p>
+<h2 id="4-upload-the-html-and-project-documents-together">4. Upload the HTML and project documents together</h2>
+<p>Upload the <strong>contents of the extracted folder</strong>, rather than the ZIP or the enclosing <code>phil-hopkins-portfolio</code> folder.</p>
+<ol>
+<li>Open the repository’s <strong>Code</strong> tab and stay at its top level, on <code>main</code>.</li>
+<li>Select <strong>Add file → Upload files</strong>.</li>
+<li>Drag these items from your extracted folder into the upload area: <code>index.html</code>, <code>README.md</code>, <code>.nojekyll</code>, <code>GITHUB-SETUP-GUIDE.html</code>, <code>GITHUB-SETUP-GUIDE.md</code>, and the entire <code>projects</code> folder.</li>
+<li>Check the upload list. It should show <code>index.html</code> at the top level and paths such as <code>projects/airbnb-price-analysis/report.pdf</code> for the documents.</li>
+<li>Enter a commit message such as <strong>Add professional portfolio and project files</strong>. A commit is a saved version of your repository’s files.</li>
+<li>Choose <strong>Commit directly to the main branch</strong>, then click <strong>Commit changes</strong>. If GitHub starts a new branch instead, complete its pull request and merge it into <code>main</code> before enabling Pages.</li>
+</ol>
+<p>All files in this package are below GitHub’s browser-upload limit of <strong>25 MiB per file</strong>, and the package contains fewer than 100 files. You can use the browser upload method for the entire package. The database and housing PDFs are the largest items; allow their uploads to finish.</p>
+<h3>Check the top level after uploading</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Location in the repository</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>index.html</code></td>
+<td>Top level</td>
+<td>Portfolio homepage</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Top level</td>
+<td>Project overview shown on GitHub</td>
+</tr>
+<tr>
+<td><code>.nojekyll</code></td>
+<td>Top level</td>
+<td>Keeps this package on the static-file publishing path</td>
+</tr>
+<tr>
+<td><code>projects</code></td>
+<td>Top-level folder</td>
+<td>Original documents, code, project notes, and notebook preview</td>
+</tr>
+<tr>
+<td><code>GITHUB-SETUP-GUIDE.html</code></td>
+<td>Top level</td>
+<td>Readable setup guide</td>
+</tr>
+<tr>
+<td><code>GITHUB-SETUP-GUIDE.md</code></td>
+<td>Top level</td>
+<td>GitHub-readable setup guide</td>
+</tr>
+</tbody></table></div>
+<p>If you cannot see <code>.nojekyll</code> locally, you can create it on GitHub with <strong>Add file → Create new file</strong>. Name it exactly <code>.nojekyll</code>, enter <code>Static portfolio files</code>, and commit it to <code>main</code>. Its presence is what matters; it has no filename extension.</p>
+<h3>If dragging a folder does not preserve its subfolders</h3>
+<p>Upload the top-level files first. Then create each project folder through GitHub:</p>
+<ol>
+<li>Choose <strong>Add file → Create new file</strong> from the repository’s top level.</li>
+<li>Enter the complete path, such as <code>projects/airbnb-price-analysis/README.md</code>. The slashes create the folders.</li>
+<li>Copy the text from that project’s included <code>README.md</code> into the editor and commit it.</li>
+<li>Open the newly created project folder on GitHub, choose <strong>Add file → Upload files</strong>, and upload the remaining files from the matching local folder.</li>
+<li>Repeat for the seven folders listed below. Preserve every filename exactly.</li>
+</ol>
+<h3>How your original files are organized</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Original supplied file</th>
+<th>Uploaded path</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NYC Airbnb Price Prediction</td>
+<td><code>Group_5_Airbnb_NYC_Price_Analysis.pdf</code></td>
+<td><code>projects/airbnb-price-analysis/report.pdf</code></td>
+</tr>
+<tr>
+<td>NYC Airbnb Price Prediction</td>
+<td><code>group_5_final_python_notebook.ipynb</code></td>
+<td><code>projects/airbnb-price-analysis/analysis.ipynb</code></td>
+</tr>
+<tr>
+<td>Loan Default Risk Assessment</td>
+<td><code>loan_default_capstone_final.xlsx</code></td>
+<td><code>projects/loan-default-risk/loan-default-capstone.xlsx</code></td>
+</tr>
+<tr>
+<td>Retail Sales and Service Database</td>
+<td><code>Database Project Final.sql</code></td>
+<td><code>projects/retail-database/database.sql</code></td>
+</tr>
+<tr>
+<td>Retail Sales and Service Database</td>
+<td><code>Database Project Report Final.pdf</code></td>
+<td><code>projects/retail-database/report.pdf</code></td>
+</tr>
+<tr>
+<td>Athlete Housing Search and Approval</td>
+<td><code>SU26_IS4430_Group1.pdf</code></td>
+<td><code>projects/athlete-housing-system/report.pdf</code></td>
+</tr>
+<tr>
+<td>AI Knowledge Assistant Grounding</td>
+<td><code>AI Grounding Test.docx</code></td>
+<td><code>projects/ai-grounding/grounding-test.docx</code></td>
+</tr>
+<tr>
+<td>Family Activities Landing Page</td>
+<td><code>Website Landing Page Final Project.docx</code></td>
+<td><code>projects/seo-landing-page/strategy.docx</code></td>
+</tr>
+<tr>
+<td>Family Activities Landing Page</td>
+<td><code>Website-Landing-Page.txt</code></td>
+<td><code>projects/seo-landing-page/website-reference.txt</code></td>
+</tr>
+<tr>
+<td>Economic Analysis of Negligence</td>
+<td><code>EconomicLaw_Negligence_Liability.docx</code></td>
+<td><code>projects/negligence-economic-analysis/analysis.docx</code></td>
+</tr>
+</tbody></table></div>
+<p>Each project folder also contains its own <code>README.md</code> and a formatted <code>README.html</code> version. The Airbnb folder includes <code>notebook.html</code>, a readable preview of the supplied notebook’s saved content and outputs. Upload these additional files as well.</p>
+<h2 id="5-enable-github-pages">5. Enable GitHub Pages</h2>
+<ol>
+<li>In your repository, open <strong>Settings</strong>.</li>
+<li>In the left sidebar, select <strong>Pages</strong> under <strong>Code, planning, and automation</strong>.</li>
+<li>Under <strong>Build and deployment</strong>, set <strong>Source</strong> to <strong>Deploy from a branch</strong>.</li>
+<li>Set the branch to <strong>main</strong> and the folder to <strong>/(root)</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>You do not need to write a GitHub Actions workflow for this package. GitHub handles the Pages deployment after you select the branch and folder.</p>
+<h2 id="6-open-and-check-your-website">6. Open and check your website</h2>
+<ol>
+<li>Allow time for deployment. GitHub says updates can take up to <strong>10 minutes</strong> to appear.</li>
+<li>Return to <strong>Settings → Pages</strong> and use <strong>Visit site</strong> when it appears.</li>
+<li>For the recommended repository name, your website address is <strong><code>https://yourusername.github.io/</code></strong>. A normal repository page at <code>github.com/yourusername/yourusername.github.io</code> shows your files rather than the portfolio website.</li>
+<li>Use the repository’s <strong>Actions</strong> tab to check deployment status if the site is not ready.</li>
+<li>Open the site on your computer and phone. Check the project filters, expandable case studies, contact buttons, and every file link.</li>
+</ol>
+<p>PDF reports normally open in the browser. Word documents and the Excel workbook are downloads that you open in Word or Excel. The notebook preview shows saved analysis; GitHub Pages does not execute Python or retrain the models.</p>
+<p>Open the linked housing prototype and Seven Slopes project page before sharing them. Their URLs were supplied in the original materials, but their current availability could not be independently verified during preparation. Their supporting documents are included even if those external pages become unavailable.</p>
+<h2 id="7-add-the-website-to-your-professional-profiles">7. Add the website to your professional profiles</h2>
+<ol>
+<li>In your repository’s <strong>About</strong> area, use the settings gear to add your published website URL and a short description.</li>
+<li>Add the same URL to the website field on your GitHub profile.</li>
+<li>Add the link to your LinkedIn profile and, if desired, feature it as a project link.</li>
+<li>Share the published Pages URL in applications or your résumé.</li>
+</ol>
+<p>The profile README displayed on your main GitHub profile is a separate optional feature. This package provides the website and its repository README; you do not need a profile README to publish the portfolio.</p>
+<h2 id="8-update-your-portfolio-later">8. Update your portfolio later</h2>
+<p>To edit text or settings, open <code>index.html</code> in GitHub, click the pencil to edit, and commit your changes to <code>main</code>. The site redeploys automatically. You can also edit locally and upload the changed file again.</p>
+<p>To replace a document, upload the new version into the same project folder using the same filename. The existing portfolio link will continue to work. If you change the filename or folder, update the corresponding <code>href</code> path in <code>index.html</code> too.</p>
+<p>For a new project, duplicate one <code>&lt;article class=&quot;project&quot;&gt;</code> block, give it a unique <code>id</code> and heading ID, choose an existing <code>data-category</code>, write its summary, and add its file links. Upload its files into a new folder under <code>projects</code>. Update the visible seven-project and ten-file totals, project numbering, and repository README to reflect the new collection. The filter counter updates from the actual project articles.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The website shows 404</td>
+<td>Check <code>Settings → Pages</code>, <code>main</code>, and <code>/(root)</code>. Confirm <code>index.html</code> is at the top level, with that exact lowercase name. Wait for deployment to finish.</td>
+</tr>
+<tr>
+<td>GitHub shows the README instead of the portfolio</td>
+<td>Confirm you uploaded <code>index.html</code> to the selected publishing folder, then open the <code>github.io</code> URL.</td>
+</tr>
+<tr>
+<td>Documents return 404</td>
+<td>Check the full path, capitalization, and filename. Confirm you uploaded the <code>projects</code> folder rather than just the homepage.</td>
+</tr>
+<tr>
+<td>Files are under <code>phil-hopkins-portfolio/index.html</code></td>
+<td>The enclosing folder was uploaded. Upload its contents to the repository’s top level and confirm <code>index.html</code> is there.</td>
+</tr>
+<tr>
+<td>The upload contains only a ZIP</td>
+<td>Extract it on your computer, then upload the extracted contents. GitHub Pages does not unpack the ZIP for you.</td>
+</tr>
+<tr>
+<td>The file is named <code>index.html.txt</code></td>
+<td>Enable <strong>View → Show → File name extensions</strong> in Windows File Explorer and rename it to <code>index.html</code>.</td>
+</tr>
+<tr>
+<td>Profile buttons are missing</td>
+<td>Blank fields are hidden. Check the settings block; LinkedIn must use a complete <code>https://www.linkedin.com/...</code> URL.</td>
+</tr>
+<tr>
+<td>Changes are not visible</td>
+<td>Check the deployment in <strong>Actions</strong>, wait for it to finish, then refresh or try a private browser window.</td>
+</tr>
+<tr>
+<td>The Python notebook does not run on the website</td>
+<td>It is a static preview. Download the notebook and supply its original data in Python or Colab to run it. See that project’s README for missing dependencies.</td>
+</tr>
+</tbody></table></div>
+<h2 id="what-is-included-and-what-to-review">What is included and what to review</h2>
+<p>The package includes the complete portfolio HTML with embedded styling, scripts, and evidence images; the original ten attachments; seven project notes; a notebook preview; and this guide. The homepage needs no external font or JavaScript library to render.</p>
+<p>The portfolio was checked for internal file paths, embedded script syntax, project grouping, and source-file preservation. A browser visual review and a live GitHub Pages deployment were not performed in this environment. Review the layout locally and after publishing.</p>
+<p>The project materials are preserved as supplied. The Airbnb CSV and data dictionary, an optional visualization script, and the loan model’s R/SQL source files were not attached. Numerical model results are presented as <strong>reported results</strong>, rather than newly reproduced findings. Group project contribution fields are intentionally blank until you add your own role.</p>
+<p>Because this setup makes the documents public, confirm that you are comfortable sharing the included team reports and author credits. The page retains collaborative attribution and makes no claims about grades, professional employment, or measured business improvements.</p>
+<h2 id="official-references">Official references</h2>
+<p>These instructions were checked against GitHub’s documentation on October 13, 2026. Interface wording may change.</p>
+<ul>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Creating a GitHub Pages site</a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Configuring a publishing source</a></li>
+<li><a href="https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository">Adding files to a repository</a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">About GitHub Pages</a></li>
+</ul>
+</main></body></html>
